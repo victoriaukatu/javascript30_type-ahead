@@ -1,0 +1,11 @@
+.highlight {
+    background: lightpink;
+}
+
+.search {
+    width: 60%;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-color: palevioletred;
+    padding: 10px;
+}

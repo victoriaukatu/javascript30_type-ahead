@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Live Search! 👀</title>
-  <!-- <link rel="stylesheet" href="style.css"> -->
+  <title>Live Search!</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -30,9 +30,27 @@ function searchPlaces(searchTerm, cities) {
   });
 }
 
+// adds commas to the population numbers
+// (don't try to memorize! you can find versions of this function in places like stackoverflow)
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
 function displayResults() {
   const resultsArray = searchPlaces(this.value, cities);
   console.log(resultsArray);
+  const html = resultsArray.map(place => {
+    const regex = new RegExp(this.value, 'gi');
+    const cityName = place.city.replace(regex, `<span class="highlight">${this.value}</span>`);
+    const stateName = place.state.replace(regex, `<span class="highlight">${this.value}</span>`);
+    return `
+      <li class="list">
+      <span class="name">${cityName}, ${stateName}</span>
+      <span class="pop">${numberWithCommas(place.population)}</span>
+      </li>
+    `;
+  }).join(''); // join converts it from an array to a long string, now it looks like a proper list w/o commas between each result
+  suggestions.innerHTML = html;
 }
 
 const searchInput = document.querySelector('.search'); // targeting the input by its class
