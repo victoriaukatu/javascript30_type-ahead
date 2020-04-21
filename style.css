@@ -1,3 +1,7 @@
+body {
+    background: #c2c2d6;
+}
+
 .highlight {
     background: lightpink;
 }
@@ -6,6 +10,10 @@
     width: 60%;
     box-sizing: border-box;
     border: 2px solid;
+    border-radius: 25px;
     border-color: palevioletred;
     padding: 10px;
+    background: pink;
+    color: #52527a;
+    font-size: 20px;
 }
