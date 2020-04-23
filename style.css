@@ -6,6 +6,25 @@ body {
     background: lightpink;
 }
 
+img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+}
+
+.list {
+    border-radius: 3px;
+    border: solid grey;
+    padding: 3px;
+    display: block;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background: #b3b3cc;
+}
+
 .search {
     width: 60%;
     box-sizing: border-box;
@@ -16,4 +35,13 @@ body {
     background: pink;
     color: #52527a;
     font-size: 20px;
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
+.suggestions {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: #52527a;
 }
