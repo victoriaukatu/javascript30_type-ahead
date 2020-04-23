@@ -11,6 +11,7 @@ img {
     margin-right: auto;
     margin-left: auto;
     width: 50%;
+    padding-left: 80px;
 }
 
 .list {
@@ -23,6 +24,10 @@ img {
     margin-right: auto;
     width: 80%;
     background: #b3b3cc;
+}
+
+.pop {
+    float: right;
 }
 
 .search {
@@ -44,4 +49,5 @@ img {
     font-size: 30px;
     text-align: center;
     color: #52527a;
+    padding-left: 45px;
 }
